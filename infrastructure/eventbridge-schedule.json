@@ -1,0 +1,20 @@
+{
+  "Name": "continuity-deadline-evaluator-schedule",
+  "Description": "Recurring scheduled deadline evaluation for CONTINUITY cases in DynamoDB",
+  "ScheduleExpression": "rate(1 hour)",
+  "ScheduleExpressionTimezone": "UTC",
+  "FlexibleTimeWindow": {
+    "Mode": "FLEXIBLE",
+    "MaximumWindowInMinutes": 5
+  },
+  "Target": {
+    "Arn": "arn:aws:lambda:ap-south-1:ACCOUNT_ID:function:continuity-deadline-evaluator",
+    "RoleArn": "arn:aws:iam::ACCOUNT_ID:role/continuity-eventbridge-scheduler-role",
+    "Input": "{\"source\": \"aws.scheduler\", \"detail-type\": \"Scheduled Deadline Evaluation\"}",
+    "RetryPolicy": {
+      "MaximumEventAgeInSeconds": 3600,
+      "MaximumRetryAttempts": 2
+    }
+  },
+  "State": "ENABLED"
+}
