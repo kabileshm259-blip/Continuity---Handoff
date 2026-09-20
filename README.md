@@ -398,7 +398,11 @@ Continuity---Handoff/
 > The demo shows a real handoff moving through Amazon Bedrock Nova 2 Lite extraction, deterministic policy evaluation, Continuity Queue creation, case inspection, and S3-backed evidence verification.
 
 ---
+## Live Link 
 
+**Project Live on Amplify :** [https://main.d2knkzd891upjq.amplifyapp.com/]
+
+---
 ## Team — Court of Owls
 
 - **Yukesh A** — Team Lead
